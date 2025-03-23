@@ -2,9 +2,10 @@ import discord
 from discord import app_commands
 from discord.ext import commands
 import aiohttp
+import os
 
 # 봇 설정
-TOKEN = "MTM1MzMzMzM5MjIwMDA0NDU3NQ.G3BycP.lHZXJ5Rr1o3rmTv-OJS0Vpn0ouorf0rHrBnynA"
+TOKEN = "access_token"
 intents = discord.Intents.all()
 bot = commands.Bot(command_prefix="!", intents=intents)
 
@@ -133,4 +134,5 @@ async def 로블록스유저찾기(interaction: discord.Interaction, username: s
 
 
 # ✅ 봇 실행
+access_token = os.environ["BOT_TOKEN"]
 bot.run(TOKEN)
